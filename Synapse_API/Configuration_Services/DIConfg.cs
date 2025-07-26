@@ -16,6 +16,7 @@ using Qdrant.Client.Grpc;
 using Synapse_API.Services.DocumentServices.Implementations;
 using Synapse_API.Services.DocumentServices.Interfaces;
 using Synapse_API.Services.PaymentService.Synapse_API.Services;
+using Synapse_API.Services.PaymentService;
 namespace Synapse_API.Configuration_Services
 {
     public class DIConfg
@@ -90,6 +91,7 @@ namespace Synapse_API.Configuration_Services
 
             //Vnpay
             services.AddScoped<SubscriptionService>();
+            services.AddScoped<PaymentService>();
         }
     }
 }
